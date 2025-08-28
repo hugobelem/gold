@@ -10,6 +10,8 @@ function drawBlackhole() {
 function blackhole(x, y=400) {
     this.x = x;
     this.y = y
+    this.killed = false;
+    this.triggered = false;
 
     this.draw = function() {
         push();
@@ -32,15 +34,6 @@ function blackhole(x, y=400) {
     }
 
     this.check = function() {
-        isWithinBlackhole = characterX > this.x + 40 && characterX < this.x + 150
-        isNotJumpping = characterY >= floorY
-        if (isWithinBlackhole && isNotJumpping && shrink >= 0) {
-            isShrinking = true;
-            shrink -= 0.02;
-            //Deactivate game character movements
-            isLeft = false
-            isRight = false;
-            isJumping = false;
-        }
+        checkDeath(this.x, 120, this)
     }
 }
