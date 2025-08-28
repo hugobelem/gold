@@ -1,8 +1,7 @@
 let asteroids = [];
 
 function drawAsteroids() {
-    for (let a of asteroids)
-    {
+    for (let a of asteroids) {
       a.draw();
       a.rotate();
     }
@@ -28,6 +27,7 @@ function asteroid(x, y, s=1) {
       scale(this.s);
       rotate(this.angle);
 
+      //Body
       fill(150, 130, 100);
       beginShape();
       curveVertex(40, 0);
@@ -40,15 +40,15 @@ function asteroid(x, y, s=1) {
       curveVertex(35, 10);
       endShape(CLOSE);
 
-      // shading
+      //Shading
       fill(110, 95, 80, 140);
       ellipse(15, 15, 18, 12);
 
-      // craters
+      //Craters
       fill(100, 85, 70, 180);
       ellipse(-12, -5, 12, 8);
 
-      // highlights
+      //Highlights
       fill(235, 233, 224, 180);
       ellipse(-20, -20, 18, 12);
       pop();

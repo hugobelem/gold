@@ -1,16 +1,13 @@
 let stars = [];
 
-function drawSky()
-{
+function drawSky() {
 	background(29, 53, 87);
 }
 
-function drawStars()
-{
-	for (let s of stars)
-    {
+function drawStars() {
+	for (let s of stars) {
         stroke(235, 233, 224);
-        strokeWeight(s.w + random(0.4, 0.5));
+        strokeWeight(s.w);
         point(s.x, s.y);
     }
 }

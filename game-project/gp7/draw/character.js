@@ -2,28 +2,22 @@ let shrink = 0.4;
 let isShrinking = false;
 
 function drawCharacter(x, y) {
-	if(isLeft && isFalling)
-	{
+	if(isLeft && isFalling) {
 		drawChickenJumpingLeft(x, y);
 	}
-	else if(isRight && isFalling)
-	{
+	else if(isRight && isFalling) {
 		drawChickenJumpingRight(x, y);
 	}
-	else if(isLeft) 
-	{
+	else if(isLeft) {
 		drawChickenWalkingLeft(x, y);
 	}
-	else if(isRight)
-	{
+	else if(isRight) {
 		drawChickenWalkingRight(x, y);
 	}
-	else if(isFalling || isShrinking) 
-	{
+	else if(isFalling || isShrinking) {
 		drawChickenFrontFacingJumping(x, y)
 	}
- 	else
-	{
+ 	else {
 		drawChickenFrontFacing(x, y);
 	}
 }
@@ -35,14 +29,14 @@ function drawChickenFrontFacing(x, y) {
 	translate(x, y);
 	scale(s);
 
-	// legs
+	//Legs
 	stroke(255, 165, 0);
 	strokeWeight(8);
 	line(0, 90, -20, 120);
 	line(0, 90, 20, 120);
 	noStroke();
 
-	// wings
+	//Wings
 	fill(250, 221, 60);
 	rect(-80, 10, 50, 50, 15);
 	fill(255, 195, 0);
@@ -53,25 +47,25 @@ function drawChickenFrontFacing(x, y) {
 	fill(255, 195, 0);
 	rect(25, 15, 50, 50, 15);
 
-	// body
+	//Body
 	noStroke();
 	fill(250, 221, 60);
 	rect(-50, 0, 100, 110, 20);
 
-	// head
+	//Head
 	fill(255, 195, 0);
 	rect(-40, -54, 80, 80, 20);
 	fill(250, 221, 60);
 	rect(-40, -60, 80, 80, 20);
 
-	// helmet
+	//Helmet
 	stroke(0, 50);
 	strokeWeight(1);
 	fill(214, 204, 194, 100);
 	ellipse(0, -30, 130, 130);
 	noStroke();
 
-	// eye
+	//Eye
 	fill(50);
 	ellipse(-20, -20, 14, 20);
 	fill(255, 250);
@@ -81,13 +75,13 @@ function drawChickenFrontFacing(x, y) {
 	fill(255, 250);
 	ellipse(20, -25, 5, 4);
 
-	// beak
+	//Beak
 	fill(255, 100, 0);
 	ellipse(0, 0, 14, 20);
 	fill(255, 165, 0);
 	ellipse(0, -5, 12, 20);
 
-	// comb
+	//Comb
 	fill(220, 50, 50);
 	ellipse(-10, -60, 20, 20);
 	ellipse(0, -65, 20, 20);
@@ -102,14 +96,14 @@ function drawChickenFrontFacingJumping(x=200, y=410) {
 	translate(x, y);
 	scale(s);
 
-	// legs
+	//Legs
 	stroke(255, 165, 0);
 	strokeWeight(8);
 	line(-20, 40, -20, 70);
 	line(20, 40, 20, 70);
 	noStroke();
 
-	// wings
+	//Wings
 	fill(250, 221, 60);
 	rect(-95, -45, 50, 50, 15);
 	fill(255, 195, 0);
@@ -120,25 +114,25 @@ function drawChickenFrontFacingJumping(x=200, y=410) {
 	fill(255, 195, 0);
 	rect(35, -35, 50, 50, 15);
 
-	// body
+	//Body
 	noStroke();
 	fill(250, 221, 60);
 	rect(-50, -50, 100, 110, 20);
 
-	// head
+	//Head
 	fill(255, 195, 0);
 	rect(-40, -104, 80, 80, 20);
 	fill(250, 221, 60);
 	rect(-40, -110, 80, 80, 20);
 
-	// helmet
+	//Helmet
 	stroke(0, 50);
 	strokeWeight(1);
 	fill(214, 204, 194, 100);
 	ellipse(0, -80, 130, 130);
 	noStroke();
 
-	// eye
+	//Eye
 	fill(50);
 	ellipse(-20, -70, 14, 20);
 	fill(255, 250);
@@ -148,13 +142,13 @@ function drawChickenFrontFacingJumping(x=200, y=410) {
 	fill(255, 250);
 	ellipse(20, -75, 5, 4);
 
-	// beak
+	//Beak
 	fill(255, 100, 0);
 	ellipse(0, -50, 14, 20);
 	fill(255, 165, 0);
 	ellipse(0, -55, 12, 20);
 
-	// comb
+	//Comb
 	fill(220, 50, 50);
 	ellipse(-10, -110, 20, 20);
 	ellipse(0, -115, 20, 20);
@@ -169,49 +163,49 @@ function drawChickenWalkingLeft(x=200, y=410) {
 	translate(x, y);
 	scale(s);
 
-	// legs
+	//Legs
 	stroke(255, 165, 0);
 	strokeWeight(8);
 	line(0, 90, 0, 120);
 	noStroke();
 
-	// body
+	//Body
 	noStroke();
 	fill(250, 221, 60);
 	rect(-50, 0, 100, 110, 20);
 
-	// wings
+	//Wings
 	fill(235, 94, 40);
 	rect(-10, 15, 50, 50, 15);
 	fill(255, 195, 0);
 	rect(-5, 25, 50, 50, 15);
 
-	// head
+	//Head
 	fill(255, 195, 0);
 	rect(-40, -64, 80, 80, 20);
 	fill(250, 221, 60);
 	rect(-40, -70, 80, 80, 20);
 
-	// helmet
+	//Helmet
 	stroke(0, 50);
 	strokeWeight(1);
 	fill(214, 204, 194, 100);
 	ellipse(0, -30, 130, 130);
 	noStroke();
 
-	// eye
+	//Eye
 	fill(50);
 	ellipse(-20, -20, 14, 20);
 	fill(255, 250);
 	ellipse(-22, -25, 5, 4);
 
-	// beak
+	//Beak
 	fill(255, 100, 0);
 	ellipse(-40, 0, 14, 20);
 	fill(255, 165, 0);
 	ellipse(-40, -5, 12, 20);
 
-	// comb
+	//Comb
 	fill(220, 50, 50);
 	ellipse(-10, -60, 20, 20);
 	ellipse(0, -65, 20, 20);
@@ -226,49 +220,49 @@ function drawChickenWalkingRight(x=200, y=410) {
 	translate(x, y);
 	scale(s);
 
-	// legs
+	//Legs
 	stroke(255, 165, 0);
 	strokeWeight(8);
 	line(0, 90, 0, 120);
 	noStroke();
 
-	// body
+	//Body
 	noStroke();
 	fill(250, 221, 60);
 	rect(-50, 0, 100, 110, 20);
 
-	// wings
+	//Wings
 	fill(235, 94, 40);
 	rect(-35, 15, 50, 50, 15);
 	fill(255, 195, 0);
 	rect(-40, 25, 50, 50, 15);
 
-	// head
+	//Head
 	fill(255, 195, 0);
 	rect(-40, -64, 80, 80, 20);
 	fill(250, 221, 60);
 	rect(-40, -70, 80, 80, 20);
 
-	// helmet
+	//Helmet
 	stroke(0, 50);
 	strokeWeight(1);
 	fill(214, 204, 194, 100);
 	ellipse(0, -30, 130, 130);
 	noStroke();
 
-	// eye
+	//Eye
 	fill(50);
 	ellipse(20, -20, 14, 20);
 	fill(255, 250);
 	ellipse(22, -25, 5, 4);
 
-	// beak
+	//Beak
 	fill(255, 100, 0);
 	ellipse(40, 0, 14, 20);
 	fill(255, 165, 0);
 	ellipse(40, -5, 12, 20);
 
-	// comb
+	//Comb
 	fill(220, 50, 50);
 	ellipse(-10, -60, 20, 20);
 	ellipse(0, -65, 20, 20);
@@ -283,49 +277,49 @@ function drawChickenJumpingLeft(x=200, y=410) {
 	translate(x, y);
 	scale(s);
 
-	// legs
+	//Legs
 	stroke(255, 165, 0);
 	strokeWeight(8);
 	line(0, 90, 20, 125);
 	noStroke();
 
-	// body
+	//Body
 	noStroke();
 	fill(250, 221, 60);
 	rect(-50, 0, 100, 110, 20);
 
-	// wings
+	//Wings
 	fill(235, 94, 40);
 	rect(5, 20, 50, 50, 15);
 	fill(255, 195, 0);
 	rect(15, 25, 55, 55, 15);
 
-	// head
+	//Head
 	fill(255, 195, 0);
 	rect(-40, -64, 80, 80, 20);
 	fill(250, 221, 60);
 	rect(-40, -70, 80, 80, 20);
 
-	// helmet
+	//Helmet
 	stroke(0, 50);
 	strokeWeight(1);
 	fill(214, 204, 194, 100);
 	ellipse(0, -30, 130, 130);
 	noStroke();
 
-	// eye
+	//Eye
 	fill(50);
 	ellipse(-20, -20, 14, 20);
 	fill(255, 250);
 	ellipse(-22, -25, 5, 4);
 
-	// beak
+	//Beak
 	fill(255, 100, 0);
 	ellipse(-40, 0, 14, 20);
 	fill(255, 165, 0);
 	ellipse(-40, -5, 12, 20);
 
-	// comb
+	//Comb
 	fill(220, 50, 50);
 	ellipse(-10, -60, 20, 20);
 	ellipse(0, -65, 20, 20);
@@ -340,49 +334,49 @@ function drawChickenJumpingRight(x=200, y=410) {
 	translate(x, y);
 	scale(s);
 
-	// legs
+	//Legs
 	stroke(255, 165, 0);
 	strokeWeight(8);
 	line(20, 90, 0, 125);
 	noStroke();
 
-	// body
+	//Body
 	noStroke();
 	fill(250, 221, 60);
 	rect(-50, 0, 100, 110, 20);
 
-	// wings
+	//Wings
 	fill(235, 94, 40);
 	rect(-45, 20, 50, 50, 15);
 	fill(255, 195, 0);
 	rect(-60, 25, 55, 50, 15);
 
-	// head
+	//Head
 	fill(255, 195, 0);
 	rect(-40, -64, 80, 80, 20);
 	fill(250, 221, 60);
 	rect(-40, -70, 80, 80, 20);
 
-	// helmet
+	//Helmet
 	stroke(0, 50);
 	strokeWeight(1);
 	fill(214, 204, 194, 100);
 	ellipse(0, -30, 130, 130);
 	noStroke();
 
-	// eye
+	//Eye
 	fill(50);
 	ellipse(20, -20, 14, 20);
 	fill(255, 250);
 	ellipse(22, -25, 5, 4);
 
-	// beak
+	//Beak
 	fill(255, 100, 0);
 	ellipse(40, 0, 14, 20);
 	fill(255, 165, 0);
 	ellipse(40, -5, 12, 20);
 
-	// comb
+	//Comb
 	fill(220, 50, 50);
 	ellipse(-10, -60, 20, 20);
 	ellipse(0, -65, 20, 20);

@@ -6,8 +6,7 @@ let characterY;
 
 let flagpole;
 
-function startGame()
-{
+function startGame() {
 	textFont('Courier New');
 	
 	floorX = 150;
@@ -34,8 +33,7 @@ function startGame()
 	blackholes = positions.map(p => new blackhole(p))
 
 	//Setup asteroids
-	for (i = 0; i < 50; i++)
-	{
+	for (i = 0; i < 50; i++) {
 		asteroids.push(
 			new asteroid(
 				random(ENDING),
@@ -46,12 +44,11 @@ function startGame()
 	}
 	
 	//Setup stars
-	for (i = 0; i < 1000; i++) 
-	{
+	for (i = 0; i < 1000; i++) {
 		stars.push({
 			x: random(width),
 			y: random(height),
-			w: random(3)
+			w: random(3.5)
 		})
 	}
 }

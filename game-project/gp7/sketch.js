@@ -12,16 +12,14 @@ const SPEED = 6;
 const BEGINING = 140;
 const ENDING = 1800;
 
-function setup()
-{
+function setup() {
 	let canvas = createCanvas(1024, 576);
 	canvas.style('border-radius', '20px')
 
 	startGame();
 }
 
-function draw()
-{
+function draw() {
 	//Sidescrolling
 	cameraX = constrain(characterX - width / 2, 0, max(0, ENDING - width));
 
@@ -57,8 +55,7 @@ function draw()
 
 	//lives
 	textSize(16);
-	for (i = 0; i < lives; i++)
-	{
+	for (i = 0; i < lives; i++) {
 		text("❤️", 20 * (1 + i), 275);
 	}
 }

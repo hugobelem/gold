@@ -17,8 +17,7 @@ function characterMovements() {
 		characterX += SPEED;
 	}
 	
-	if (isJumping && !isFalling) //!isFalling condition prevents double jumps
-	{
+	if (isJumping && !isFalling) { //!isFalling condition prevents double jumps
 		jumpingHeight = -20;
 		isFalling = true;
 	}
@@ -28,20 +27,17 @@ function characterMovements() {
 
 function gravity() {
 	characterIsAboveGround = characterY < floorY
-	if (characterIsAboveGround)
-	{
+	if (characterIsAboveGround) {
 		jumpingHeight += 1.6;
 	}
-	else
-	{
+	else {
 		characterY = floorY
 		jumpingHeight = 0;
 		isFalling = false;
 	}
 }
 
-function keyPressed()
-{
+function keyPressed() {
 	if (!flagpole.isReached || lives < 1) {
 		if (key == "a") {
 			isLeft = true;
@@ -58,8 +54,7 @@ function keyPressed()
 	}
 }
 
-function keyReleased()
-{
+function keyReleased() {
 	if (key == "a") {
 		isLeft = false;
 	}

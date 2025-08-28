@@ -1,10 +1,8 @@
 let collectables = [];
 
 function drawCollectables() {
-	for (let c of collectables)
-	{
-		if (!c.isFound)
-		{
+	for (let c of collectables) {
+		if (!c.isFound) {
 			c.draw();
 			c.check();
 		}
@@ -47,13 +45,12 @@ function collectable(x=400, y=366, isFound=false) {
 			textSize(16);
 			text("🐣", this.x - 10, this.y + 7);
 		}
+	}
 
 	this.check = function() {
-		if (dist(characterX, characterY, this.x, this.y) < 20)
-		{
+		if (dist(characterX, characterY, this.x, this.y) < 20) {
 			this.isFound = true;
 			score++;
 		}
-	}
 	}
 }
