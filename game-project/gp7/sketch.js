@@ -59,4 +59,14 @@ function draw() {
 	for (i = 0; i < lives; i++) {
 		text("❤️", 20 * (1 + i), 275);
 	}
+
+	//Game Over
+	if (lives == 0) {
+		noStroke();
+		fill(255);
+		textSize(100);
+		// shrink += 0.5;
+		background(255, 100, 0, 100);
+		text("Game Over", 260, 288);
+	}
 }
