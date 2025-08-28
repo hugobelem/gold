@@ -8,14 +8,16 @@ function checkDeath(x, w, obj) {
     }
 
     if (obj.triggered && shrink > 0) {
-        shrink -= 0.02;
         isLeft = false
         isRight = false;
         isJumping = false;
+        isShrinking = false;
+        shrink -= 0.02;
     }
 
-    if (obj.triggered && !obj.killed) {
+    if (obj.triggered && !obj.killed && shrink < 0) {
         lives--;
+        shrink = 0.4;
         obj.killed = true;
         startGame()
     }

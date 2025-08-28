@@ -16,6 +16,7 @@ function setup() {
 	let canvas = createCanvas(1024, 576);
 	canvas.style('border-radius', '20px')
 
+	spawnUniverse();
 	startGame();
 }
 
