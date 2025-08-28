@@ -38,7 +38,7 @@ function gravity() {
 }
 
 function keyPressed() {
-	if (!flagpole.isReached || lives < 1) {
+	if (!flagpole.isReached && lives > 0) {
 		if (key == "a") {
 			isLeft = true;
 			openDoor = false;

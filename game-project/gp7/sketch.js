@@ -34,6 +34,7 @@ function draw() {
 	drawWindows();
 	drawPlaques();
 	drawPlants();
+	drawFlagpole();
 	drawCollectables();
 	drawCharacter(characterX, characterY);
 	pop();
@@ -60,12 +61,20 @@ function draw() {
 		text("❤️", 20 * (1 + i), 275);
 	}
 
+	//Level Complete
+	if (flagpole.isReached) {
+		noStroke();
+		fill(255);
+		textSize(80);
+		background(0, 255, 0, 50);
+		text("Level Complete", 195, 288);
+	}
+
 	//Game Over
-	if (lives == 0) {
+	if (lives < 1) {
 		noStroke();
 		fill(255);
 		textSize(100);
-		// shrink += 0.5;
 		background(255, 100, 0, 100);
 		text("Game Over", 260, 288);
 	}

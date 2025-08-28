@@ -15,7 +15,7 @@ function startGame() {
 	characterX = 200;
 	characterY = floorY;
 
-	flagpole = {x: ENDING, y: 317, isReached: false};
+	flagpole = {x: ENDING - 100, y: 341, isReached: false};
 
 	plantsX = [200, 400, 1000];
 	windowsX = [800, 650, 1250];
