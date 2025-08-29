@@ -8,7 +8,7 @@ let cameraX = 0;
 let score = 0;
 let lives = 3;
 
-const SPEED = 6;
+const SPEED = 5;
 const BEGINING = 140;
 const ENDING = 1800;
 
