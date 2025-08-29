@@ -50,6 +50,7 @@ function keyPressed() {
 		else if (key == "w") {
 			isJumping = true;
 			openDoor = false;
+			jumpSound.play();
 		}
 	}
 }

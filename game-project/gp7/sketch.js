@@ -12,6 +12,10 @@ const SPEED = 6;
 const BEGINING = 140;
 const ENDING = 1800;
 
+function preload() {
+	sounds();
+}
+
 function setup() {
 	let canvas = createCanvas(1024, 576);
 	canvas.style('border-radius', '20px')
@@ -63,15 +67,20 @@ function draw() {
 
 	//Level Complete
 	if (flagpole.isReached) {
+		if (!playLevelUpSound) {
+			levelUpSound.play();
+			playLevelUpSound = true;
+		}
 		noStroke();
 		fill(255);
 		textSize(80);
-		background(0, 255, 0, 50);
+		background(0, 255, 0, 35);
 		text("Level Complete", 195, 288);
 	}
 
 	//Game Over
 	if (lives < 1) {
+		gameOverSound.play();
 		noStroke();
 		fill(255);
 		textSize(100);

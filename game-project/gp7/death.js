@@ -13,6 +13,7 @@ function checkDeath(x, w, obj) {
         isJumping = false;
         isShrinking = false;
         shrink -= 0.02;
+        blackholeSound.play();
     }
 
     if (obj.triggered && !obj.killed && shrink < 0) {
