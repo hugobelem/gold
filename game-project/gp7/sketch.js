@@ -39,6 +39,7 @@ function draw() {
 	drawPlaques();
 	drawPlants();
 	drawFlagpole();
+	drawPlatforms();
 	drawCollectables();
 	drawCharacter(characterX, characterY);
 	pop();

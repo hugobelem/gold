@@ -25,4 +25,18 @@ function spawnUniverse() {
 			w: random(3.5)
 		})
 	}
+
+	//Setup platforms
+	let positions = [
+		{x:200, y:250},
+		{x:300, y:330},
+		{x:500, y:300},
+		{x:570, y:200},
+		{x:950, y:350},
+		{x:1150, y:300},
+		{x:1200, y:300},
+		{x:1350, y:230},
+		{x:1530, y:200},
+	];
+	platforms = positions.map(p => platform(p.x, p.y))
 }
