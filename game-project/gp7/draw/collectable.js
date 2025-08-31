@@ -48,7 +48,7 @@ function collectable(x=400, y=366, isFound=false) {
 	}
 
 	this.check = function() {
-		if (dist(characterX, characterY, this.x, this.y) < 20) {
+		if (dist(characterX, characterY, this.x, this.y) < 25) {
 			collectSound.play();
 			this.isFound = true;
 			score++;
