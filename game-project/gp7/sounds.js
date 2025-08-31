@@ -5,6 +5,7 @@ let levelUpSound;
 let gameOverSound;
 
 let playLevelUpSound = false;
+let playGameOverSound = false;
 
 function sounds() {
 	soundFormats("mp3", "m4a");
@@ -13,9 +14,11 @@ function sounds() {
 	jumpSound.setVolume(0.8);
 
     blackholeSound = loadSound("assets/blackhole.mp3");
-	blackholeSound.setVolume(0.1);
+	blackholeSound.setVolume(0.07);
+
+	gameOverSound = loadSound("assets/gameover.mp3");
+	gameOverSound.setVolume(3);
 
 	collectSound = loadSound("assets/collect.m4a");
 	levelUpSound = loadSound("assets/levelup.mp3");
-	gameOverSound = loadSound("assets/gameover.mp3");
 }

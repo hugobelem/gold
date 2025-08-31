@@ -80,7 +80,10 @@ function draw() {
 
 	//Game Over
 	if (lives < 1) {
-		gameOverSound.play();
+		if (!playGameOverSound) {
+			gameOverSound.play();
+			playGameOverSound = true
+		}
 		noStroke();
 		fill(255);
 		textSize(100);
