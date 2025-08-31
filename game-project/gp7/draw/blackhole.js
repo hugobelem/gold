@@ -7,7 +7,7 @@ function drawBlackhole() {
     }
 }
 
-function blackhole(x, y=400) {
+function Blackhole(x, y=400) {
     this.x = x;
     this.y = y
     this.killed = false;

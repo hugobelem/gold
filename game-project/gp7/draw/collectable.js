@@ -9,7 +9,7 @@ function drawCollectables() {
 	}
 }
 
-function collectable(x=400, y=366, isFound=false) {
+function Collectable(x=400, y=366, isFound=false) {
 	this.x = x;
 	this.y = y;
 	this.isFound = isFound;

@@ -7,7 +7,7 @@ function drawAsteroids() {
     }
 }
 
-function asteroid(x, y, s=1) {
+function Asteroid(x, y, s=1) {
   this.s = s;
   this.angle = random(TWO_PI);
   this.vector = createVector(x, y)

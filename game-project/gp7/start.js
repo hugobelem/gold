@@ -22,5 +22,5 @@ function startGame() {
 
 	//Blackholes
 	let positions = [300, 632, 1050];
-	blackholes = positions.map(p => new blackhole(p))
+	blackholes = positions.map(p => new Blackhole(p))
 }
