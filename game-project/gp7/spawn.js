@@ -1,6 +1,6 @@
 function spawnUniverse() {
 	//Setup collectables
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < 8; i++) {
 		collectables.push(
 			new collectable(random(200, ENDING), random(366, 150))
 		)
@@ -18,7 +18,7 @@ function spawnUniverse() {
 	}
 	
 	//Setup stars
-	for (i = 0; i < 1000; i++) {
+	for (i = 0; i < 500; i++) {
 		stars.push({
 			x: random(width),
 			y: random(height),

@@ -1,4 +1,12 @@
 function drawSpaceship() {
+    stroke(214, 204, 194);
+    strokeWeight(1);
+    fill(237, 237, 233, 30);
+    rect(220, 0, width, 50, 50);
+    rect(180, 10, width, 50, 50);
+    rect(140, 20, width, 50, 50);
+    rect(100, 30, width, 50, 50);
+
     //Walls
     stroke(214, 204, 194);
     strokeWeight(1);
@@ -9,13 +17,13 @@ function drawSpaceship() {
     stroke(214, 204, 194);
     strokeWeight(1);
     fill(235, 233, 224);
-    rect(100, floorY - 300, width, 350, 20);
+    rect(100, floorY - 350, width, 400, 20);
 
     //Shadow
     noStroke();
     fill(0, 4);
-    rect(100, floorY - 300, width, 35, 20, 0, 0, 0);
-    rect(100, floorY - 300, width, 50, 20, 0, 0, 0);
+    rect(100, floorY - 350, width, 35, 20, 0, 0, 0);
+    rect(100, floorY - 350, width, 50, 20, 0, 0, 0);
 
     if (openDoor) {
          drawSpaceshipDoor();

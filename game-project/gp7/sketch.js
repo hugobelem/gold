@@ -56,9 +56,11 @@ function draw() {
 	characterMovements();
 
 	//Score
-	fill(0);
-	textSize(13);
-	text("spaceship NSP300/ mission 01/ eggs retrieved " + score + "/", 100, 73);
+	stroke(200);
+	strokeWeight(1);
+	fill(255);
+	textSize(14);
+	text("mission 01/ eggs retrieved " + score + "/", 20, 560);
 
 	//lives
 	textSize(16);
