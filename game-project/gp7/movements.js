@@ -26,8 +26,7 @@ function characterMovements() {
 }
 
 function gravity() {
-	characterIsAboveGround = characterY < floorY
-	if (characterIsAboveGround) {
+	if (characterY < floorY) {
 		jumpingHeight += 1.6;
 	}
 	else {
@@ -38,16 +37,20 @@ function gravity() {
 }
 
 function keyPressed() {
+	let k = key.toLowerCase();
+
 	if (!flagpole.isReached && lives > 0) {
-		if (key == "a") {
+		let k = key.toLowerCase();
+
+		if (k == "a") {
 			isLeft = true;
 			openDoor = false;
 		}
-		else if (key == "d") {
+		else if (k == "d") {
 			isRight = true;
 			openDoor = false;
 		}
-		else if (key == "w") {
+		else if (k == "w") {
 			isJumping = true;
 			openDoor = false;
 			jumpSound.play();
@@ -56,13 +59,15 @@ function keyPressed() {
 }
 
 function keyReleased() {
-	if (key == "a") {
+	let k = key.toLowerCase();
+
+	if (k == "a") {
 		isLeft = false;
 	}
-	else if (key == "d") {
+	else if (k == "d") {
 		isRight = false;
 	}
-	else if (key == "w") {
+	else if (k == "w") {
 		isJumping = false;
 	}
 }
