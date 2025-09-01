@@ -10,7 +10,7 @@ let lives = 3;
 
 const SPEED = 5;
 const BEGINING = 140;
-const ENDING = 1800;
+const ENDING = 2500;
 
 function preload() {
 	sounds();
@@ -47,7 +47,7 @@ function draw() {
 	
 	//Spaceship's left wall. Used to hide the objects moving through
 	fill(237, 237, 233);
-	rect(0, 92, 99, 350);
+	rect(0, 41, 99, 440, 19, 0, 0, 0);
 
 	//The black holes and starts should be at the top of everything
 	drawBlackhole();

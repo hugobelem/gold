@@ -37,6 +37,12 @@ function spawnUniverse() {
 		{x:1200, y:300},
 		{x:1350, y:230},
 		{x:1530, y:200},
+		{x:1750, y:300},
+		{x:1800, y:250},
+		{x:1950, y:200},
+		{x:2000, y:350},
+		{x:2150, y:250},
+		{x:2200, y:225},
 	];
 	platforms = positions.map(p => platform(p.x, p.y))
 }
