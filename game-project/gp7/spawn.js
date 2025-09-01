@@ -3,7 +3,7 @@ function spawnUniverse() {
 	for (i = 0; i < 8; i++) {
 		collectables.push(
 			new Collectable(random(200, ENDING), random(366, 150))
-		)
+		);
 	}
 
 	//Setup asteroids
@@ -14,7 +14,7 @@ function spawnUniverse() {
 				random(height),
 				random(0.4, 1.5)
 			)
-		)
+		);
 	}
 	
 	//Setup stars
@@ -23,7 +23,7 @@ function spawnUniverse() {
 			x: random(width),
 			y: random(height),
 			w: random(3.5)
-		})
+		});
 	}
 
 	//Setup platforms
@@ -44,5 +44,5 @@ function spawnUniverse() {
 		{x:2150, y:250},
 		{x:2200, y:225},
 	];
-	platforms = positions.map(p => platform(p.x, p.y))
+	platforms = positions.map(p => platform(p.x, p.y));
 }

@@ -15,7 +15,7 @@ function drawCharacter(x, y) {
 		drawChickenWalkingRight(x, y);
 	}
 	else if(isFalling || isShrinking) {
-		drawChickenFrontFacingJumping(x, y)
+		drawChickenFrontFacingJumping(x, y);
 	}
  	else {
 		drawChickenFrontFacing(x, y);
@@ -23,7 +23,7 @@ function drawCharacter(x, y) {
 }
 
 function drawChickenFrontFacing(x, y) {
-	s = shrink
+	s = shrink;
 
 	push();
 	translate(x, y);

@@ -13,7 +13,7 @@ function drawPlants() {
 		ellipse(425, 330, 8, 30);
 		fill(0, 128, 0);
 		ellipse(408, 370, 8, 20);
-		// Trunk
+		// Stem
 		fill(112, 200, 10);
 		rect(409, 300, 3, 100, 20);
 		fill(153, 194, 77);
@@ -27,6 +27,6 @@ function drawPlants() {
 		rect(397, 400, 46, 10, 5);
 		fill(150);
 		rect(399, 409, 42, 2, 5);
-		pop()
+		pop();
 	}
 }

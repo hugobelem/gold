@@ -9,13 +9,14 @@ function drawBlackhole() {
 
 function Blackhole(x, y=400) {
     this.x = x;
-    this.y = y
+    this.y = y;
     this.killed = false;
     this.triggered = false;
 
     this.draw = function() {
         push();
         translate(-cameraX, 0);
+
         //Outer layer
         noStroke();
         fill(202, 240, 248, 150);
@@ -30,13 +31,14 @@ function Blackhole(x, y=400) {
         //Center
         noStroke();
         rect(this.x + 60, this.y + 40, 60, 60, 15);
+
         pop();
     }
 
     this.check = function() {
-        let isInline = characterX > this.x + 40 && characterX < this.x + 120 + 30
-        let isNotJumpping = characterY >= floorY
-        let isContact = isInline && isNotJumpping
-        checkDeath(this, isContact)
+        let isInline = characterX > this.x + 40 && characterX < this.x + 120 + 30;
+        let isNotJumpping = characterY >= floorY;
+        let isContact = isInline && isNotJumpping;
+        checkDeath(this, isContact);
     }
 }

@@ -5,7 +5,7 @@ function checkDeath(obj, isContact) {
     }
 
     if (obj.triggered && shrink > 0) {
-        isLeft = false
+        isLeft = false;
         isRight = false;
         isJumping = false;
         isShrinking = false;
@@ -17,6 +17,6 @@ function checkDeath(obj, isContact) {
         lives--;
         shrink = 0.4;
         obj.killed = true;
-        startGame()
+        startGame();
     }
 }

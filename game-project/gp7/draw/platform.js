@@ -43,6 +43,6 @@ function platform(x, y) {
                 isFalling = false;
             }
         }
-    }
+    };
     return p;
 }

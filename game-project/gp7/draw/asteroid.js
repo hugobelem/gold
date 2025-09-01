@@ -9,10 +9,10 @@ function drawAsteroids() {
 
 function Asteroid(x, y, s=1) {
   this.s = s;
-  this.angle = random(TWO_PI);
-  this.vector = createVector(x, y)
+  this.angle = random(7);
+  this.vector = createVector(x, y);
   this.rotation = random(-0.03, 0.03);
-  this.speed = p5.Vector.random2D().mult(random(0.2, 1.2));
+  this.speed = createVector(-1.2, 0.2);
 
   this.rotate = function() {
     this.vector.add(this.speed);

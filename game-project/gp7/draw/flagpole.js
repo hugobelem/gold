@@ -1,6 +1,6 @@
 function checkFlagpole() {
     if (characterX >= flagpole.x) {
-        flagpole.isReached = true
+        flagpole.isReached = true;
     }
 }
 
