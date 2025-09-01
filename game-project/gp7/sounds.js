@@ -1,5 +1,5 @@
 let jumpSound;
-let blackholeSound;
+let deathSound;
 let collectSound;
 let levelUpSound;
 let gameOverSound;
@@ -13,8 +13,8 @@ function sounds() {
 	jumpSound = loadSound("assets/jump.mp3");
 	jumpSound.setVolume(0.8);
 
-    blackholeSound = loadSound("assets/blackhole.mp3");
-	blackholeSound.setVolume(0.07);
+    deathSound = loadSound("assets/death.mp3");
+	deathSound.setVolume(0.07);
 
 	gameOverSound = loadSound("assets/gameover.mp3");
 	gameOverSound.setVolume(3);
