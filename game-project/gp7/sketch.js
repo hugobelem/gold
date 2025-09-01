@@ -42,6 +42,7 @@ function draw() {
 	drawPlatforms();
 	drawCollectables();
 	drawCharacter(characterX, characterY);
+	drawEnemies();
 	pop();
 	
 	//Spaceship's left wall. Used to hide the objects moving through
