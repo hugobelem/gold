@@ -26,7 +26,9 @@ function startGame() {
 
 	//Setup enemies
 	let enemyPositions = [
-		{x: 400, y: 200, range: 200},
+		{x: 200, y: 200, range: 400},
+		{x: 800, y: 67, range: 900},
+		{x: 1200, y: 391, range: 400},
 	];
 	enemies = enemyPositions.map(p => new Enemy(p.x, p.y, p.range));
 }
