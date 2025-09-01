@@ -34,6 +34,9 @@ function Blackhole(x, y=400) {
     }
 
     this.check = function() {
-        checkDeath(this.x, 120, this)
+        let isInline = characterX > this.x + 40 && characterX < this.x + 120 + 30
+        let isNotJumpping = characterY >= floorY
+        let isContact = isInline && isNotJumpping
+        checkDeath(this, isContact)
     }
 }

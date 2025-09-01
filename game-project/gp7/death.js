@@ -1,8 +1,5 @@
-function checkDeath(x, w, obj) {
-    let isWithin = characterX > obj.x + 40 && characterX < x + w + 30
-    let isNotJumpping = characterY >= floorY
-
-    if (isWithin && isNotJumpping) {
+function checkDeath(obj, isContact) {
+    if (isContact) {
         obj.triggered = true;
         isShrinking = true;
     }
@@ -13,7 +10,7 @@ function checkDeath(x, w, obj) {
         isJumping = false;
         isShrinking = false;
         shrink -= 0.02;
-        blackholeSound.play();
+        deathSound.play();
     }
 
     if (obj.triggered && !obj.killed && shrink < 0) {
