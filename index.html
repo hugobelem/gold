@@ -7,42 +7,32 @@
     />
     <title>Space Chicken</title>
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="p5.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="sounds.js"></script>
+    <script src="spawn.js"></script>
+    <script src="start.js"></script>
+    <script src="draw/character.js"></script>
+    <script src="draw/spaceship.js"></script>
+    <script src="draw/asteroid.js"></script>
+    <script src="draw/window.js"></script>
+    <script src="draw/plaque.js"></script>
+    <script src="draw/sky.js"></script>
+    <script src="draw/plant.js"></script>
+    <script src="draw/collectable.js"></script>
+    <script src="draw/blackhole.js"></script>
+    <script src="draw/flagpole.js"></script>
+    <script src="draw/platform.js"></script>
+    <script src="draw/enemy.js"></script>
+    <script src="movements.js"></script>
+    <script src="death.js"></script>
   </head>
   <body>
-    <p>🖥️</p>
+    <div id="game-overlay">
+      <h1>🖥️</h1>
+      <p>DESKTOP ONLY</p>
+    </div>
   </body>
 </html>
-
-<script>
-if (window.innerWidth >= 1024) {
-  const scripts = [
-    'p5.min.js',
-    'p5.sound.min.js',
-    'sketch.js',
-    'sounds.js',
-    'spawn.js',
-    'start.js',
-    'draw/character.js',
-    'draw/spaceship.js',
-    'draw/asteroid.js',
-    'draw/window.js',
-    'draw/plaque.js',
-    'draw/sky.js',
-    'draw/plant.js',
-    'draw/collectable.js',
-    'draw/blackhole.js',
-    'draw/flagpole.js',
-    'draw/platform.js',
-    'draw/enemy.js',
-    'movements.js',
-    'death.js'
-  ];
-
-  scripts.forEach(src => {
-    const s = document.createElement('script');
-    s.src = src;
-    document.body.appendChild(s);
-  });
-}
-</script>
