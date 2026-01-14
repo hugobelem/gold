@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #252422;
+}
+
+@media (min-width: 1024px) {
+  p {
+    display: none;
+  }
+}
+
+  p {
+    color: white;
+  }
