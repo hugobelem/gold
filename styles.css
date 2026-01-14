@@ -20,6 +20,12 @@ p {
   }
 }
 
+html, body {
+  overflow: hidden;
+  touch-action: none;
+}
+
+
 @media (max-width: 1024px) {
   #game-overlay {
     position: fixed;
